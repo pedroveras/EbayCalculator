@@ -1,0 +1,146 @@
+body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,
+		Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+p,h1,form,button {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.spacer {
+	clear: both;
+	height: 1px;
+}
+/* ----------- My Form ----------- */
+.myform {
+	margin: 0 auto;
+	width: 460px;
+	padding: 14px;
+}
+
+#inputform {
+	margin-left: auto;
+	margin-right: auto;
+	width: 460px;
+}	
+
+/* ----------- stylized ----------- */
+#stylized {
+	border: solid 2px #b7ddf2;
+	background: #ebf4fb;
+	width: 540px;
+}
+
+#results {
+	margin-top: 20px;
+	border: solid 2px #b7ddf2;
+	background: #ebf4fb;
+	width: 540px;
+}
+
+#stylized h1 {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+#stylized p {
+	font-size: 11px;
+	color: #666666;
+	margin-bottom: 20px;
+	border-bottom: solid 1px #b7ddf2;
+	padding-bottom: 10px;
+}
+
+#stylized label {
+	font-weight: bold;
+	text-align: right;
+	width: 140px;
+	float: left;
+	vertical-align: middle;
+	display: inline-block;
+	padding-top: 4px;
+}
+
+#stylized .small {
+	color: #666666;
+	display: block;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: right;
+	width: 140px;
+}
+
+#stylized input {
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 240px;
+	margin: 2px 0 20px 10px;
+}
+
+#stylized select{
+	font-size: 12px;
+	padding: 4px 2px;
+	border: solid 1px #aacfe4;
+	width: 240px;
+	margin: 2px 0 20px 10px;
+}
+
+
+.submit {
+	clear: both;
+	margin-left: 200px;
+	width: 125px;
+	height: 31px;
+	background: #666666;
+	text-align: center;
+	line-height: 31px;
+	color: #FFFFFF;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#results .spanleft {
+	float:left;
+	text-align: left;
+	width: 135px;
+	padding: 1px 1px;
+/* 	margin: 2px 0 20px 10px; */
+	display: inline-block;
+	text-align: right;
+	font-weight: bold;
+}
+
+#results .spanright {
+	width: 390px;
+	padding: 1px 1px;
+/* 	margin: 2px 0 20px 10px; */
+	display: inline-block;
+}
+
+#results .spanimg {
+	text-align: center;
+	padding-bottom: 5px;
+	clear: both;
+}
+
+
+.completed {
+	font-size: 25px;
+	font-weight: bold;
+	color:red;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.error {
+	color: red;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: bold;
+	text-align: center;
+}
