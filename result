@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSingleItemResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+   <Timestamp>2013-05-04T21:01:19.475Z</Timestamp>
+   <Ack>Success</Ack>
+   <Build>E819_CORE_APILW_15990921_R1</Build>
+   <Version>819</Version>
+   <Item>
+    <BestOfferEnabled>false</BestOfferEnabled>
+    <ItemID>190810725232</ItemID>
+    <EndTime>2013-05-11T16:07:56.000Z</EndTime>
+    <StartTime>2013-03-12T16:07:56.000Z</StartTime>
+    <ViewItemURLForNaturalSearch>http://www.ebay.com/itm/2013Men-Stylish-Slim-Short-sleeve-Casual-POLO-Shirt-T-shirts-Tee-Tops-6-colors-/190810725232?var=?vti=Color%3A%09White%0ASize%3A%09US+XS+-+China+XXL</ViewItemURLForNaturalSearch>
+    <ListingType>StoresFixedPrice</ListingType>
+    <Location>shanghai</Location>
+    <PaymentMethods>PayPal</PaymentMethods>
+    <GalleryURL>http://i.ebayimg.com/00/s/NjM4WDQ4MA==/z/gXQAAMXQTghRP1FF/$(KGrHqYOKocFE2FP,GBZBRP1FE8h7w~~60_1.JPG?set_id=880000500F</GalleryURL>
+    <PictureURL>http://i.ebayimg.com/00/s/NTAwWDUwMg==/z/t84AAOxy14VRP1EU/$T2eC16JHJGQE9noMZLWPBRP1EUL-2w~~60_1.JPG?set_id=880000500F</PictureURL>
+    <PrimaryCategoryID>57990</PrimaryCategoryID>
+    <PrimaryCategoryName>Clothing, Shoes &amp; Accessories:Men's Clothing:Casual Shirts</PrimaryCategoryName>
+    <Quantity>9</Quantity>
+    <Seller>
+     <UserID>woshikuailepaopao5188</UserID>
+     <FeedbackRatingStar>Red</FeedbackRatingStar>
+     <FeedbackScore>3183</FeedbackScore>
+     <PositiveFeedbackPercent>99.7</PositiveFeedbackPercent>
+     <TopRatedSeller>true</TopRatedSeller>
+    </Seller>
+    <BidCount>0</BidCount>
+    <ConvertedCurrentPrice currencyID="USD">14.66</ConvertedCurrentPrice>
+    <CurrentPrice currencyID="USD">14.66</CurrentPrice>
+    <ListingStatus>Active</ListingStatus>
+    <QuantitySold>4</QuantitySold>
+    <ShipToLocations>Worldwide</ShipToLocations>
+    <Site>US</Site>
+    <TimeLeft>P6DT19H6M37S</TimeLeft>
+    <Title>2013Men Stylish Slim Short sleeve Casual POLO Shirt T-shirts Tee Tops 6 colors[White,US XS - China XXL]</Title>
+    <ShippingCostSummary>
+     <ShippingServiceCost currencyID="USD">0.0</ShippingServiceCost>
+     <ShippingType>Flat</ShippingType>
+     <ListedShippingServiceCost currencyID="USD">0.0</ListedShippingServiceCost>
+    </ShippingCostSummary>
+    <HitCount>820</HitCount>
+    <PrimaryCategoryIDPath>11450:1059:57990</PrimaryCategoryIDPath>
+    <SecondaryCategoryID>15687</SecondaryCategoryID>
+    <SecondaryCategoryName>Clothing, Shoes &amp; Accessories:Men's Clothing:T-Shirts</SecondaryCategoryName>
+    <SecondaryCategoryIDPath>11450:1059:15687</SecondaryCategoryIDPath>
+    <Storefront>
+     <StoreURL>http://stores.ebay.com/id=198049584</StoreURL>
+     <StoreName>woshikuailepaopao5188</StoreName>
+    </Storefront>
+    <Country>CN</Country>
+    <ReturnPolicy>
+     <Refund>Money Back</Refund>
+     <ReturnsWithin>14 Days</ReturnsWithin>
+     <ReturnsAccepted>Returns Accepted</ReturnsAccepted>
+     <ShippingCostPaidBy>Buyer</ShippingCostPaidBy>
+    </ReturnPolicy>
+    <AutoPay>false</AutoPay>
+    <IntegratedMerchantCreditCardEnabled>false</IntegratedMerchantCreditCardEnabled>
+    <Variations>
+     <Variation>
+      <StartPrice currencyID="USD">14.66</StartPrice>
+      <Quantity>9</Quantity>
+      <VariationSpecifics>
+       <NameValueList>
+        <Name>Color:</Name>
+        <Value>White</Value>
+       </NameValueList>
+       <NameValueList>
+        <Name>Size:</Name>
+        <Value>US XS - China XXL</Value>
+       </NameValueList>
+      </VariationSpecifics>
+      <SellingStatus>
+       <QuantitySold>4</QuantitySold>
+      </SellingStatus>
+     </Variation>
+     <Pictures>
+      <VariationSpecificName>Color:</VariationSpecificName>
+      <VariationSpecificPictureSet>
+       <VariationSpecificValue>White</VariationSpecificValue>
+       <PictureURL>http://i.ebayimg.com/00/s/NjM4WDQ4MA==/z/gXQAAMXQTghRP1FF/$(KGrHqYOKocFE2FP,GBZBRP1FE8h7w~~60_1.JPG?set_id=880000500F</PictureURL>
+      </VariationSpecificPictureSet>
+     </Pictures>
+    </Variations>
+    <HandlingTime>1</HandlingTime>
+    <QuantityAvailableHint>MoreThan</QuantityAvailableHint>
+    <QuantityThreshold>10</QuantityThreshold>
+    <ExcludeShipToLocation>Africa</ExcludeShipToLocation>
+    <ExcludeShipToLocation>Central America and Caribbean</ExcludeShipToLocation>
+    <ExcludeShipToLocation>BH</ExcludeShipToLocation>
+    <ExcludeShipToLocation>KW</ExcludeShipToLocation>
+    <ExcludeShipToLocation>LB</ExcludeShipToLocation>
+    <ExcludeShipToLocation>OM</ExcludeShipToLocation>
+    <ExcludeShipToLocation>QA</ExcludeShipToLocation>
+    <ExcludeShipToLocation>SA</ExcludeShipToLocation>
+    <ExcludeShipToLocation>YE</ExcludeShipToLocation>
+    <ExcludeShipToLocation>AS</ExcludeShipToLocation>
+    <ExcludeShipToLocation>AU</ExcludeShipToLocation>
+    <ExcludeShipToLocation>CK</ExcludeShipToLocation>
+    <ExcludeShipToLocation>FJ</ExcludeShipToLocation>
+    <ExcludeShipToLocation>PF</ExcludeShipToLocation>
+    <ExcludeShipToLocation>GU</ExcludeShipToLocation>
+    <ExcludeShipToLocation>KI</ExcludeShipToLocation>
+    <ExcludeShipToLocation>MH</ExcludeShipToLocation>
+    <ExcludeShipToLocation>FM</ExcludeShipToLocation>
+    <ExcludeShipToLocation>NR</ExcludeShipToLocation>
+    <ExcludeShipToLocation>NC</ExcludeShipToLocation>
+    <ExcludeShipToLocation>NU</ExcludeShipToLocation>
+    <ExcludeShipToLocation>PW</ExcludeShipToLocation>
+    <ExcludeShipToLocation>PG</ExcludeShipToLocation>
+    <ExcludeShipToLocation>SB</ExcludeShipToLocation>
+    <ExcludeShipToLocation>TO</ExcludeShipToLocation>
+    <ExcludeShipToLocation>TV</ExcludeShipToLocation>
+    <ExcludeShipToLocation>VU</ExcludeShipToLocation>
+    <ExcludeShipToLocation>WF</ExcludeShipToLocation>
+    <ExcludeShipToLocation>WS</ExcludeShipToLocation>
+    <ExcludeShipToLocation>BM</ExcludeShipToLocation>
+    <ExcludeShipToLocation>GL</ExcludeShipToLocation>
+    <ExcludeShipToLocation>PM</ExcludeShipToLocation>
+    <ExcludeShipToLocation>AL</ExcludeShipToLocation>
+    <ExcludeShipToLocation>AD</ExcludeShipToLocation>
+    <ExcludeShipToLocation>FR</ExcludeShipToLocation>
+    <ExcludeShipToLocation>DE</ExcludeShipToLocation>
+    <ExcludeShipToLocation>GG</ExcludeShipToLocation>
+    <ExcludeShipToLocation>LU</ExcludeShipToLocation>
+    <ExcludeShipToLocation>MK</ExcludeShipToLocation>
+    <ExcludeShipToLocation>ME</ExcludeShipToLocation>
+    <ExcludeShipToLocation>RO</ExcludeShipToLocation>
+    <ExcludeShipToLocation>SM</ExcludeShipToLocation>
+    <ExcludeShipToLocation>RS</ExcludeShipToLocation>
+    <ExcludeShipToLocation>SJ</ExcludeShipToLocation>
+    <ExcludeShipToLocation>VA</ExcludeShipToLocation>
+    <ExcludeShipToLocation>CO</ExcludeShipToLocation>
+    <ExcludeShipToLocation>FK</ExcludeShipToLocation>
+    <ExcludeShipToLocation>GF</ExcludeShipToLocation>
+    <ExcludeShipToLocation>GY</ExcludeShipToLocation>
+    <ExcludeShipToLocation>PY</ExcludeShipToLocation>
+    <ExcludeShipToLocation>SR</ExcludeShipToLocation>
+    <ExcludeShipToLocation>UY</ExcludeShipToLocation>
+    <ExcludeShipToLocation>VE</ExcludeShipToLocation>
+    <ExcludeShipToLocation>BN</ExcludeShipToLocation>
+    <ExcludeShipToLocation>MO</ExcludeShipToLocation>
+    <ExcludeShipToLocation>AM</ExcludeShipToLocation>
+    <ExcludeShipToLocation>AZ</ExcludeShipToLocation>
+    <ExcludeShipToLocation>BD</ExcludeShipToLocation>
+    <ExcludeShipToLocation>BT</ExcludeShipToLocation>
+    <ExcludeShipToLocation>CN</ExcludeShipToLocation>
+    <ExcludeShipToLocation>GE</ExcludeShipToLocation>
+    <ExcludeShipToLocation>KZ</ExcludeShipToLocation>
+    <ExcludeShipToLocation>KG</ExcludeShipToLocation>
+    <ExcludeShipToLocation>UZ</ExcludeShipToLocation>
+    <TopRatedListing>true</TopRatedListing>
+    <GlobalShipping>false</GlobalShipping>
+   </Item>
+  </GetSingleItemResponse>
