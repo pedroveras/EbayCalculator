@@ -1,44 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>EBAY COST CALCULATOR</title>
 <link type="text/css" rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-<h2>EBAY COST CALCULATOR</h2>
+<?php
+	require_once('mail.php');
+	if (isset($_POST['confirmation'])) {
+		$mail = new mail($item);
+	} 
+?>	
 
 <div id="stylized" class="myform">
-	<form id="form" action="mail.php" method="get" style="width: 460px;">
+	<form id="shiptoform" action="" method="post">
+	    <?php if (isset($mail)) { echo $mail->send(); }?>
+	    
+	    
 		<input type="hidden" name="action" value="shipto">
+		<input type="hidden" name="submit" value="submit">
+		<input type="hidden" name="amountPaid" value="<?php echo $amountPaid;?>">
+		<input type="hidden" name="maximumBid" value="<?php if (isset($maximumBid)) {echo $maximumBid;}?>">
+		
 		<label for="name">Name:</label>
-		<input name="name" type="text" id="name">
+		<input name="name" type="text" id="name" class="shipto">
 		
 		<label for="address">Address (Line 1):</label> 
-		<input name="address1" type="text" id="address1"/>
+		<input name="address1" type="text" id="address1" class="shipto"/>
 		
 		<label for="address2">Address (Line 2):</label> 
-		<input name="address2" type="text" id="address2"/>
+		<input name="address2" type="text" id="address2" class="shipto"/>
 		
 		<label for="city">City:</label> 
-		<input name="city" type="text" id="city"/>
+		<input name="city" type="text" id="city" class="shipto"/>
 		
 		<label for="zip">Zip Code:</label> 
-		<input name="zip" type="text" id="zip"/>
+		<input name="zip" type="text" id="zip" class="shipto"/>
 		
 		<label for="phone">Phone:</label> 
-		<input name="phone" type="text" id="phone"/>
+		<input name="phone" type="text" id="phone" class="shipto"/>
+		
+		<label for="email">Email:</label> 
+		<input name="email" type="text" id="email" class="shipto"/>
 		
 		<label for="note">Note to Seller:</label> 
-		<textarea name="note" id="note"></textarea>
+		<textarea name="note" id="note" class="shipto"></textarea>
 		
 		<span class="spanleft">Amount Paid:</span>
+		<span class="spanright"><?php echo "Rp ". $amountPaid;?></span>
 		
 		<div class="spacer"></div>
 		
-		<button type="submit">Confirm</button>		
+		<button type="submit" name="confirmation" class="submit">Confirm</button>		
 		<div class="spacer"></div>
 	</form>
 </div>
+
 </body>
 </html>

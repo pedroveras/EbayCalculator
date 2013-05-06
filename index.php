@@ -11,24 +11,25 @@
 <div id="stylized" class="myform">
 	<form id="inputform" name="inputform" action="calculator.php" method="get">
 		<input type="hidden" name="action" value="input">
-		<input type="hidden" name="bidprice">
+		<input type="hidden" name="maximumBid">
+		<input type="hidden" name="offer">
 		<?php
 			if (isset($_REQUEST['error'])) { 
 				echo $_REQUEST['error'];
 			}
 		 ?>
-		<label for="itemNumber">Item Number:</label>
-		<input name="itemNumber" type="text" id="itemNumber">
+		<label for="itemNumber" class="lblsearch">Item Number:</label>
+		<input name="itemNumber" class="search" type="text" id="itemNumber">
 
 		<div style="vertical-align: middle;">
 		<label for="urlLink">ebay URL link:</label> 
-		<input name="urlLink" type="text" id="urlLink"/></div>
+		<input name="urlLink" type="text" id="urlLink" class="search"/></div>
 		
 		<label for="quantity">Quantity:</label> 
-		<input name="quantity" type="text" value="1" id="quantity">
+		<input name="quantity" type="text" value="1" id="quantity" class="search">
 		
 		<label>Listing: </label>
-		<select name="listing" id="listing">
+		<select name="listing" id="listing" class="search">
 				<option value="buy_now">Buy It Now / Fixed Price</option>
 				<option value="best_offer">Best Offer</option>
 				<option value="auction">Auction</option>
@@ -40,14 +41,6 @@
 	</form>
 </div>
 <?php
-
-// if (isset($_GET['args'])) {
-// 	$args = $_GET['args'];
-// 	if (!empty($args)) {
-// 		$agri = explode("/",$args);
-// 		echo $agri[0];
-// 	}
-// }
 
 if (isset($_REQUEST['listing']) && !isset($_REQUEST['variationLink'])) {
 	if ($_REQUEST['listing'] == 'auction') {
@@ -62,6 +55,10 @@ elseif (isset($_REQUEST['variationLink'])) {
 	echo '<div id="results" class="myform" style="overflow: auto;">';
 	echo $_REQUEST['variationLink'];
 	echo '</div>';
+}
+
+if (isset($_POST['submit'])) {
+	require_once 'shipto.php';
 }
 
 ?>

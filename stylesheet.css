@@ -1,3 +1,7 @@
+h2 {
+	text-align: center;
+}
+	
 body {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,
 		Helvetica, sans-serif;
@@ -29,6 +33,7 @@ p,h1,form,button {
 
 /* ----------- stylized ----------- */
 #stylized {
+	margin-top: 20px;
 	border: solid 2px #b7ddf2;
 	background: #ebf4fb;
 	width: 540px;
@@ -74,12 +79,23 @@ p,h1,form,button {
 	width: 140px;
 }
 
-#stylized input {
+#stylized input,textarea {
 	font-size: 12px;
 	padding: 4px 2px;
 	border: solid 1px #aacfe4;
-	width: 240px;
 	margin: 2px 0 20px 10px;
+}
+
+#stylized .search {
+	width: 240px;
+}
+
+.shipto {
+	width: 350px;
+}
+
+#stylized textarea {
+	height: 90px;
 }
 
 #stylized select{
@@ -89,7 +105,6 @@ p,h1,form,button {
 	width: 240px;
 	margin: 2px 0 20px 10px;
 }
-
 
 .submit {
 	clear: both;
@@ -104,7 +119,7 @@ p,h1,form,button {
 	font-weight: bold;
 }
 
-#results .spanleft {
+.spanleft {
 	float:left;
 	text-align: left;
 	width: 135px;
@@ -115,7 +130,7 @@ p,h1,form,button {
 	font-weight: bold;
 }
 
-#results .spanright {
+.spanright {
 	width: 390px;
 	padding: 1px 1px;
 /* 	margin: 2px 0 20px 10px; */
