@@ -1,10 +1,22 @@
 <?php
 require_once('class.phpmailer.php');
+include 'config.php';
 
 class mail {
 	private $item;
+	private $mail;
 	public function __construct($item) {
 		$this->item = $item;
+		$this->mail = new PHPMailer();  // create a new object
+		$this->mail->IsSMTP(); // enable SMTP
+		$this->mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
+		$this->mail->SMTPAuth = true;  // authentication enabled
+		$this->mail->SMTPSecure = SECURE; 
+		$this->mail->Host = HOST;
+		$this->mail->Port = PORT;
+		$this->mail->Username = USERNAME;
+		$this->mail->Password = PASSWORD;
+		$this->mail->SetFrom(EMAIL, FROM);
 	}
 	
 	function send() {
@@ -46,8 +58,8 @@ class mail {
 		
 		if (!$hasError) {
 			$this->sendBuyerInformation();
-			$this->sendConfirmationBuyer();
-			header("Location: confirmation.html");
+			$this->sendConfirmationCustomer();
+			header("Location: confirmation.php");
 		}
 		
 		return $error;
@@ -55,17 +67,7 @@ class mail {
 	
 	function sendBuyerInformation() {
 		autoSetFields($this->item);
-		$mail = new PHPMailer();  // create a new object
-		$mail->IsSMTP(); // enable SMTP
-		$mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
-		$mail->SMTPAuth = true;  // authentication enabled
-		$mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for GMail
-		$mail->Host = 'smtp.gmail.com';
-		$mail->Port = 587;
-		$mail->Username = 'pedroveras@gmail.com';
-		$mail->Password = 'ordep87.';
-		$mail->SetFrom('pedroveras@gmail.com', 'Ebay Cost Calculator');
-		$mail->Subject = 'Order Confirmation';
+		$this->mail->Subject = SUBJECT_USER_INFORMATION;
 
 		$body = '';
 		$body .= "<table width=\"100%\" cellpadding=\"5\"><tr> \n";
@@ -80,37 +82,28 @@ class mail {
 		$body .= "Email: <b>" . $this->item->email . "</b><br>\n";
 		$body .= "Note to seller: <b>" . $this->item->note . "</b><br>\n";
 		$body .= "Amount Paid: <b>" . $this->item->amountPaid . "</b><br>\n";
+		$body .= "Bank: <b>" . $this->item->bank . "</b><br>\n";
 		$body .= "<b>================================================================ </b><br>\n";
 		$body .= $this->getMailBody();
 		
-		$mail->MsgHTML($body);
-		$mail->AddAddress('pedroveras@gmail.com', 'Ebay Cost Calculator');
-		if(!$mail->Send()) {
-			echo 'Mail error: '.$mail->ErrorInfo;
+		$this->mail->MsgHTML($body);
+		$this->mail->AddAddress('pedroveras@gmail.com', 'Ebay Cost Calculator');
+		if(!$this->mail->Send()) {
+			echo 'Mail error: '.$this->mail->ErrorInfo;
 		} else {
 			echo 'Message sent!';
 		}
 	}
 	
-	function sendConfirmationBuyer () {
+	function sendConfirmationCustomer () {
 		autoSetFields($this->item);
-		$mail = new PHPMailer();  // create a new object
-		$mail->IsSMTP(); // enable SMTP
-		$mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
-		$mail->SMTPAuth = true;  // authentication enabled
-		$mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for GMail
-		$mail->Host = 'smtp.gmail.com';
-		$mail->Port = 587;
-		$mail->Username = 'pedroveras@gmail.com';
-		$mail->Password = 'ordep87.';
-		$mail->SetFrom('pedroveras@gmail.com', 'Ebay Cost Calculator');
-		$mail->Subject = 'Order Confirmation';
+		$this->mail->Subject = SUBJECT_TO_CUSTOMER;
 
-		$mail->MsgHTML($this->getMailBody());
+		$this->mail->MsgHTML($this->getMailBody());
 // 		$mail->AddAddress('pedrow_veras@hotmail.com', 'Pedro');
-		$mail->AddAddress($this->item->email, $this->item->name);
-		if(!$mail->Send()) {
-			echo 'Mail error: '.$mail->ErrorInfo;
+		$this->mail->AddAddress($this->item->email, $this->item->name);
+		if(!$this->mail->Send()) {
+			echo 'Mail error: '.$this->mail->ErrorInfo;
 		} else {
 			echo 'Message sent!';
 		}
