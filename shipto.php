@@ -15,8 +15,6 @@
 	<form id="shiptoform" action="" method="post">
 	    <?php if (isset($mail)) { echo $mail->send(); }?>
 	    
-	    
-		<input type="hidden" name="action" value="shipto">
 		<input type="hidden" name="submit" value="submit">
 		<input type="hidden" name="amountPaid" value="<?php echo $amountPaid;?>">
 		<input type="hidden" name="maximumBid" value="<?php if (isset($maximumBid)) {echo $maximumBid;}?>">
@@ -47,6 +45,13 @@
 		
 		<span class="spanleft">Amount Paid:</span>
 		<span class="spanright"><?php echo "Rp ". $amountPaid;?></span>
+		
+		<span class="spanleft">Bank:</span>
+		<span class="spanright">
+			<select name="bank">
+				<option value="BCA">BCA</option>
+			</select>
+		</span>
 		
 		<div class="spacer"></div>
 		

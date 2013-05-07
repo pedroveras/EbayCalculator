@@ -2,11 +2,6 @@
 	$amountPaid = $item->getTotalCostAuction();
 	$maximumBid = $item->maximumBid;
 ?>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>EBAY COST CALCULATOR</title>
-
 <script type="text/javascript">
 function CalcBidPrice() {
 	if (isNaN(document.orderform.maximumBid.value)) {
@@ -21,8 +16,7 @@ function CalcBidPrice() {
 }
 	
 </script>
-</head>
-<body>
+
 <div id="results" class="myform" style="overflow: auto;">
 	<form id="orderform" name="orderform" method="post" action="">
 	
@@ -37,7 +31,7 @@ function CalcBidPrice() {
 		 <span class="spanright"><?php echo $item->status; ?></span>
 		 
 		<span class="spanleft">Item Number:</span>
-		<span class="spanright"> <?php echo $item->itemNumber;?></span>
+		<span class="spanright"><a href='<?php echo $item->url ?>' target="_new"><?php echo $item->itemNumber ?></a></span>
 		
 		<span class="spanleft">Title:</span>
 		 <span class="spanright"><?php echo $item->title;?></span>
@@ -94,5 +88,3 @@ function CalcBidPrice() {
 		?>
 	</form>	
 </div>
-</body>
-</html>

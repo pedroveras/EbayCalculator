@@ -21,7 +21,7 @@ $amountPaid = $item->getTotalCost();
 		 <span class="spanright"><?php echo $item->status; ?></span>
 		 
 		<span class="spanleft">Item Number:</span>
-		<span class="spanright"> <?php echo $item->itemNumber;?></span>
+		<span class="spanright"><a href='<?php echo $item->url ?>' target="_new"><?php echo $item->itemNumber ?></a></span>
 		
 		<span class="spanleft">Title:</span>
 		 <span class="spanright"><?php echo $item->title;?></span>

@@ -10,9 +10,9 @@ $amountPaid = $item->getTotalCost();
 <script type="text/javascript">
 function CalcBidPrice() {
 	if (isNaN(document.orderform.offer.value)) {
-		alert("Maximum bid must be numeric.");
+		alert("Offer price must be numeric.");
 	} else {
-		document.inputform.itemNumber.value = <?php echo $itemNumber?>;
+		document.inputform.itemNumber.value = <?php echo $item->itemNumber?>;
 		document.inputform.offer.value = document.orderform.offer.value;
 		document.inputform.listing.options.selectedIndex = 1;
 		document.inputform.action.value = 'offering';
@@ -31,13 +31,13 @@ function CalcBidPrice() {
 				echo "<div class='completed'>Item Sold</div>";
 			} 
 		?>
-		<div class="spanimg"><img src="<?php echo $item->picture?>" style="width: 140px; height: 140px;"/></div>
+		<div class="spanimg"><img src="<?php echo $item->picture?>"/></div>
 		
 		<span class="spanleft">Status:</span>
 		 <span class="spanright"><?php echo $item->status; ?></span>
 		 
 		<span class="spanleft">Item Number:</span>
-		<span class="spanright"> <?php echo $item->itemNumber ?></span>
+		<span class="spanright"><a href='<?php echo $item->url ?>' target="_new"><?php echo $item->itemNumber ?></a></span>
 		
 		<span class="spanleft">Title:</span>
 		 <span class="spanright"><?php echo $item->title ?></span>
@@ -61,7 +61,7 @@ function CalcBidPrice() {
 			<div class="maximumbid">
 				<span class="spanleft">Offer Price (USD):</span>
 				<span><input type="text" name="offer" value="<?php echo $item->price;?>"></span>
-				<button type="button" onclick="javascript:CalcBidPrice();">Calculate price</button>
+				<button type="button" onclick="javascript:CalcBidPrice();" class="submit" style="margin-left: 0px;">Calculate price</button>
 			</div>	
 		
 		<span class="spanleft">USD to IDR rate:</span>
