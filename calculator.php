@@ -1,6 +1,6 @@
 <?php
 include 'config.php';
-require_once 'item.php';
+require_once 'Item.php';
 require_once('class.phpmailer.php');
 
 if (isset($_GET['action']) && ($_GET['action'] == 'input' || $_GET['action'] == 'bidding' || $_GET['action'] == 'variation' || $_GET['action'] == 'offering')) {
