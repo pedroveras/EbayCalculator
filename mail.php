@@ -87,11 +87,9 @@ class mail {
 		$body .= $this->getMailBody();
 		
 		$this->mail->MsgHTML($body);
-		$this->mail->AddAddress('pedroveras@gmail.com', 'Ebay Cost Calculator');
+		$this->mail->AddAddress(EMAIL, 'Ebay Cost Calculator');
 		if(!$this->mail->Send()) {
 			echo 'Mail error: '.$this->mail->ErrorInfo;
-		} else {
-			echo 'Message sent!';
 		}
 	}
 	
@@ -100,7 +98,6 @@ class mail {
 		$this->mail->Subject = SUBJECT_TO_CUSTOMER;
 
 		$this->mail->MsgHTML($this->getMailBody());
-// 		$mail->AddAddress('pedrow_veras@hotmail.com', 'Pedro');
 		$this->mail->AddAddress($this->item->email, $this->item->name);
 		if(!$this->mail->Send()) {
 			echo 'Mail error: '.$this->mail->ErrorInfo;
