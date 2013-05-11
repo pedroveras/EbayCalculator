@@ -1,23 +1,25 @@
 <?php
 require_once('class.phpmailer.php');
-include 'config.php';
 
 class mail {
 	private $item;
 	private $mail;
 	public function __construct($item) {
 		$this->item = $item;
+	}
+	
+	function getMailConfig() {
 		$this->mail = new PHPMailer();  // create a new object
 		$this->mail->IsSMTP(); // enable SMTP
 		$this->mail->SMTPDebug = 1;  // debugging: 1 = errors and messages, 2 = messages only
 		$this->mail->SMTPAuth = true;  // authentication enabled
-		$this->mail->SMTPSecure = SECURE; 
+		$this->mail->SMTPSecure = SECURE;
 		$this->mail->Host = HOST;
 		$this->mail->Port = PORT;
 		$this->mail->Username = USERNAME;
 		$this->mail->Password = PASSWORD;
 		$this->mail->SetFrom(EMAIL, FROM);
-	}
+	} 
 	
 	function send() {
 		autoSetFields($this->item);
@@ -66,7 +68,7 @@ class mail {
 	}
 	
 	function sendBuyerInformation() {
-		autoSetFields($this->item);
+		$this->getMailConfig();
 		$this->mail->Subject = SUBJECT_USER_INFORMATION;
 
 		$body = '';
@@ -94,16 +96,14 @@ class mail {
 	}
 	
 	function sendConfirmationCustomer () {
-		autoSetFields($this->item);
+		$this->getMailConfig();
 		$this->mail->Subject = SUBJECT_TO_CUSTOMER;
 
 		$this->mail->MsgHTML($this->getMailBody());
 		$this->mail->AddAddress($this->item->email, $this->item->name);
 		if(!$this->mail->Send()) {
 			echo 'Mail error: '.$this->mail->ErrorInfo;
-		} else {
-			echo 'Message sent!';
-		}
+		} 
 	}
 	
 	public function getMailBody() {
