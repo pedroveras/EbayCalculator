@@ -169,8 +169,6 @@ function getShippingInfo($itemNumber,$quantity) {
 	$result = simplexml_load_file($call);
 	$shippingCost = $result->ShippingDetails->InternationalShippingServiceOption->ShippingServiceCost;
 	
-	$result ->asXML("shipping_result");
-	
 	return $shippingCost;
 }
 
